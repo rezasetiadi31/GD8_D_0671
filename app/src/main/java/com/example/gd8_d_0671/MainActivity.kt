@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //get lat long
+    //get lat long
     private fun getLocationMarker(){
         try {
             val stream = assets.open("sample_maps.json")
@@ -79,6 +80,7 @@ class MainActivity : AppCompatActivity() {
             ).show()
         }
     }
+
     private fun initMarker(modelList: List<ModelMain>) {
         for (i in modelList.indices) {
             overlayItem = ArrayList()
@@ -102,7 +104,7 @@ class MainActivity : AppCompatActivity() {
                 item.showInfoWindow()
                 true
             }
-            
+
             mapView.overlays.add(marker)
             mapView.invalidate()
         }
